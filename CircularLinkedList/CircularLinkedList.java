@@ -68,4 +68,72 @@ public class CircularLinkedList {
 			System.out.println("\nCSLL does not Exit");
 		}
 	}
+	
+	public boolean searchNode(int nodeValue) {
+		
+		if(head !=null) {
+			Node tempNode = head;
+			
+			for(int i=0; i<size; i++) {
+				if(tempNode.value==nodeValue) {
+					System.out.println("Node Found At"+i);
+					return true;
+				}
+				tempNode=tempNode.next;
+			}
+			
+		}
+		System.out.println("Node not Found");
+		return false;
+	}
+	
+	public void deleteNode(int location) {
+		if(head==null) {
+			System.out.println("Circular singledList does not Exit");
+			return;
+		}else if(location ==0) {
+			head=head.next;
+			tail.next=head;
+			size--;
+			if(size==0) {
+				tail=null;
+				head.next=null;
+				head=null;
+			}
+			
+		}else if(location >=size) {
+			Node tempNode=head;
+			for(int i=0; i<size-1;i++) {
+				tempNode=tempNode.next;
+			}
+			if(tempNode ==head) {
+				head.next=null;
+				tail=head=null;
+				size--;
+				return;
+			}
+			tempNode.next=head;
+			tail=tempNode;
+			size--;
+		}else {
+			Node tempNode=head;
+			for(int i=0; i<location-1;i++) {
+				tempNode=tempNode.next;
+			}
+			tempNode.next=tempNode.next.next;
+			size--;
+		}
+		
+	}
+	
+	public void deleteCSll() {
+		if(head==null) {
+			System.out.println("CSLL does not  Exit");
+		}else {
+			head=null;
+			tail.next=null;
+			tail=null;
+			System.out.println("CSLL sucessFUlly Deleted");
+		}
+	}
 }

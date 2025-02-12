@@ -8,6 +8,8 @@ public class Main {
 		csll.insertCLL(6, 1);
 		csll.insertCLL(7, 8);
 		csll.tranverseCSLL();
+		csll.deleteCSll();
+		csll.tranverseCSLL();
 	}
 
 }
