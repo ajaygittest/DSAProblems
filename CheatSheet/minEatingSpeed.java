@@ -21,7 +21,7 @@ public class minEatingSpeed {
 		  return low;
 	        
 	    }
-
+//finish function
 	private boolean finish(int[] piles, int h, int mid) {
 		
 		int hours=0;
