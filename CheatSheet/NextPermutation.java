@@ -6,7 +6,7 @@ public class NextPermutation {
 		
 	}
 	
-	
+	// code logic start
 	 public void nextPermutation(int[] nums) {
 	     
 		 int i=nums.length-2;
