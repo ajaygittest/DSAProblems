@@ -16,7 +16,7 @@ public class BinarySearch {
 		int index =binarySearch(array, target);
 		System.out.println(index);
 	}
-
+//code implementation
 	private static int binarySearch(int[] array, int target) {
 		int low =0;
 		int high =array.length-1;
